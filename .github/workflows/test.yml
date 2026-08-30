@@ -6,6 +6,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # **两头都跑。** README 写着「需要 Node ≥ 20」，而只在新版上跑等于那句话
+        # 没人验过——上一版 CI 就是这样：本地 Node 24 认 `--test` 的 glob，
+        # Node 20 不认，于是测试脚本在声称支持的最低版本上直接跑不起来。
+        node: ['20', '24']
     steps:
       - uses: actions/checkout@v4
         with: { path: doubak-import-adapters }
@@ -21,7 +27,7 @@ jobs:
         with: { repository: Doubak/doubak-data-specs, path: doubak-data-specs }
 
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '${{ matrix.node }}' }
 
       - run: node tools/sync-vendor.mjs --check
         working-directory: doubak-import-adapters

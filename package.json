@@ -11,7 +11,7 @@
     "doubak-import": "bin/import.js"
   },
   "scripts": {
-    "test": "node --test \"test/**/*.test.js\"",
+    "test": "node --test",
     "sync-vendor": "node tools/sync-vendor.mjs"
   }
 }
