@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+    <title>
+MewX玩过的游戏(273)
+</title>
+    
+
+
+<script>
+    function set_cookie(t,e,o,n){var i,a,r=new Date;r.setTime(r.getTime()+24*(e||30)*60*60*1e3),i="; expires="+r.toGMTString();for(a in t)document.cookie=a+"="+t[a]+i+"; domain="+(o||"douban.com")+"; path="+(n||"/")}function get_cookie(t){var e,o,n=t+"=",i=document.cookie.split(";");for(e=0;e<i.length;e++){for(o=i[e];" "==o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(n))return o.substring(n.length,o.length).replace(/\"/g,"")}return null}window.Douban=window.Douban||{};var Do=function(){Do.actions.push([].slice.call(arguments))};Do.ready=function(){Do.actions.push([].slice.call(arguments))},Do.add=Do.define=function(t,e){Do.mods[t]=e},Do.global=function(){Do.global.mods=Array.prototype.concat(Do.global.mods,[].slice.call(arguments))},Do.global.mods=[],Do.mods={},Do.actions=[],Douban.init_show_login=function(t){Do("dialog",function(){var t="/j/misc/login_form";dui.Dialog({title:"登录",url:t,width:/device-mobile/i.test(document.documentElement.className)?.9*document.documentElement.offsetWidth:350,cache:!0,callback:function(t,e){e.node.addClass("dialog-login"),e.node.find("h2").css("display","none"),e.node.find(".hd h3").replaceWith(e.node.find(".bd h3")),e.node.find("form").css({border:"none",width:"auto",padding:"0"}),e.update()}}).open()})},Do(function(){function t(t,e){var o=["ref="+encodeURIComponent(location.pathname)];for(var n in e)e.hasOwnProperty(n)&&o.push(n+"="+e[n]);window._SPLITTEST&&o.push("splittest="+window._SPLITTEST),localStorage.setItem("report",(localStorage.getItem("report")||"")+"_moreurl_separator_"+o.join("&"))}!function(){"localStorage"in window||(window.localStorage=function(){var t=document;if(!t.documentElement.addBehavior)throw"don't support localstorage or userdata.";var e="_localstorage_ie",o=t.createElement("input");o.type="hidden";var n=function(n){return function(){t.body.appendChild(o),o.addBehavior("#default#userData");var i=new Date;i.setDate(i.getDate()+365),o.expires=i.toUTCString(),o.load(e);var a=n.apply(o,arguments);return t.body.removeChild(o),a}};return{getItem:n(function(t){return this.getAttribute(t)}),setItem:n(function(t,o){this.setAttribute(t,o),this.save(e)}),removeItem:n(function(t){this.removeAttribute(t),this.save(e)}),clear:n(function(){for(var t,o=this.XMLDocument.documentElement.attributes,n=0;t=o[n];n++)this.removeAttribute(t.name);this.save(e)})}}())}(),$(window).one("load",function(){var t=localStorage.getItem("report");if(t){t=t.split("_moreurl_separator_");var e=function(o){return""==o?void e(t.shift()):void $.get("undefined"==typeof _MOREURL_REQ?"/stat.html?"+o:_MOREURL_REQ+"?"+o,function(){return t.length?(e(t.shift()),void localStorage.setItem("report",t.join("_moreurl_separator_"))):void localStorage.removeItem("report")})};e(t.shift())}}),window.moreurl=t,$(document).click(function(e){var o=e.target,n=$(o).data("moreurl-dict");n&&t(o,n)}),$.ajax_withck=function(t){return"POST"==t.type&&(t.data=$.extend(t.data||{},{ck:get_cookie("ck")})),$.ajax(t)},$.postJSON_withck=function(t,e,o){return $.post_withck(t,e,o,"json")},$.post_withck=function(t,e,o,n){return $.isFunction(e)&&(n=o,o=e,e={}),$.ajax({type:"POST",url:t,data:$.extend(e,{ck:get_cookie("ck")}),success:o,dataType:n||"text"})},$("html").click(function(t){var e=$(t.target),o=e.attr("class");o&&$(o.match(/a_(\w+)/gi)).each($.proxy(function(e,o){var n=Douban[o.replace(/^a_/,"init_")];"function"==typeof n&&(t.preventDefault(),n.call(this,t))},e[0]))})});
+    ;(function() {
+        var USER_ID=0;
+window.Ilmen=window.Ilmen||{};var Ilmen=window.Ilmen;Ilmen.ui={},Ilmen.utils={},Ilmen.data={},Ilmen.user={id:USER_ID},Ilmen.requireLogin=function(n){Ilmen.user.id||(n.stopImmediatePropagation(),Douban.init_show_login())};
+    })();
+    Do.add('dialog', {path: 'https://img1.doubanio.com/f/shire/bc881a837a728ab82aa01d653b1c180190bb5a5d/js/ui/dialog.js', type: 'js', requires: ['https://img1.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css']});
+    Do.global('https://img1.doubanio.com/f/sns/b5793c2d7c298173d57ecf7d96708b5615336def/js/sns/fp/base.js', 'dialog');
+</script>
+<script type="text/javascript" src="https://img1.doubanio.com/f/shire/0495cb173e298c28593766009c7b0a953246c5b5/js/jquery-1.8.3.js"></script>
+<link rel="stylesheet" href="https://img1.doubanio.com/f/shire/32336a6003aedfb3aed372bf3ae0b51c92d12316/css/core/_init_.css">
+<link rel="stylesheet" href="https://img1.doubanio.com/f/ilmen/034c879366382fa78a55c15406399d6977db7adf/css/ilmen/common.css">
+<link rel="stylesheet" href="https://img1.doubanio.com/f/ilmen/75ba35fadc87ea9d052896f99e9de067746f9788/css/ilmen/init.css">
+<link rel="stylesheet" href="https://img1.doubanio.com/misc/mixed_static/1ebcdea508bfcd3a.css">
+
+    <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+
+<script type="text/javascript">var _body_start = new Date();</script>
+
+    
+   
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/20e516e/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <a href="https://accounts.douban.com/passport/login?source=main" class="nav-login" rel="nofollow">登录/注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="on">
+      <a href="https://www.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">豆瓣</a>
+    </li>
+    <li class="">
+      <a href="https://book.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;0&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;0&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;0&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;0&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;0&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;0&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;0&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;0&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;0&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/20e516e/shire/bundle.js" defer="defer"></script>
+
+
+
+
+      
+    
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/20e516e/sns/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-nav-sns" class="nav">
+  <div class="nav-wrap">
+    <div class="nav-primary">
+     
+      <div class="nav-logo">
+        <a href="https://www.douban.com">豆瓣社区</a>
+      </div>
+
+      <div class="nav-search">
+  <form action="https://www.douban.com/search" method="get">
+	<fieldset>
+      <legend>搜索：</legend>
+	  <label for="inp-query">搜索你感兴趣的内容和人...</label>
+	  <div class="inp">
+	    <input type="hidden" name="source" value="suggest">
+		<input id="inp-query" name="q" size="22" maxlength="60" autocomplete="off" value="">
+	  </div>
+	  <div class="inp-btn"><input type="submit" value="搜索"></div>
+	</fieldset>
+  </form>
+</div>
+
+      
+
+<div class="nav-items">
+  <ul>
+    <li><a href="https://www.douban.com">首页</a></li>
+      <li>
+        <a href="https://www.douban.com/explore">
+          浏览发现
+        </a>
+      </li>
+      <li>
+        <a href="https://www.douban.com/gallery">
+          话题广场
+          <img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" alt="new" style="position: absolute; top: -7px; right: -13px;" />
+        </a>
+      </li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/20e516e/sns/bundle.js" defer="defer"></script>
+
+
+
+
+
+
+    
+
+<div id="wrapper">
+        
+
+        
+<div id="content">
+    
+    
+
+
+<div id="db-usr-profile">
+<div class="pic">
+    <a href="https://www.douban.com/people/mewcatcher/">
+        <img width="48" height="48" src="https://img2.doubanio.com/icon/u82160871-12.jpg" alt="MewX">
+    </a>
+</div>
+<div class="info">
+        <h1>MewX玩过的游戏(273)</h1>
+        
+    <ul>
+          <li><a href="https://www.douban.com/people/mewcatcher/">MewX的主页</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/statuses">广播</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/photos">相册</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/notes">日记</a></li>
+          <li><a href="https://www.douban.com/people/mewcatcher/doulists">豆列</a></li>
+    </ul>
+
+</div>
+</div>
+    <div class="clear"></div>
+
+
+    <div class="grid-16-8 clearfix">
+        
+        
+        <div class="article">
+               
+
+
+
+
+<div class="tabs">
+    
+        <a href="?action=wish" >想玩(198)</a>
+    
+        <a href="?action=do" >在玩(34)</a>
+    
+        <a href="?action=collect" class=on>玩过(273)</a>
+    
+</div>
+
+
+<div class="game-list">
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/10734171/"><img src="https://img1.doubanio.com/lpic/s28861157.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/10734171/">仙剑奇侠传四 仙劍奇俠傳四</a>
+            </div>
+            <div class="desc">
+                PC / 角色扮演 / 2007-08-01
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2015-10-29</span>
+                        <span class="tags">标签: RPG</span>
+                </div>
+            </div>
+        <div>仙剑系列入门作~verycd下的硬盘版，2010年~首次改成等身比例~</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a data-action="wish" data-id="10734171" class="collect-btn" rel="nofollow" href="https://www.douban.com/game/10734171/?interest=wish">
+                        <span>想玩</span>
+                    </a>
+                </span>
+                <span class='gact'>
+                    <a data-action="collect" data-id="10734171" class="collect-btn" rel="nofollow" href="https://www.douban.com/game/10734171/?interest=collect">
+                        <span>玩过</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/26437663/"><img src="https://img2.doubanio.com/lpic/s28123281.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/26437663/">永恒的赛妮亚 Eternal Senia</a>
+            </div>
+            <div class="desc">
+                PC / 角色扮演 / 冒险 / 动作 / 2015-06-18
+                <div class="rating-info">
+                    <span class="rating-star allstar40"></span>
+                    <span class="date">2015-10-29</span>
+                        <span class="tags">标签: RPG GAL</span>
+                </div>
+            </div>
+        <div>豆瓣竟然有游戏频道了？！好好好！那么这款游戏在steam免费榜前三啊，剧情是姐控 _(:3」∠)_ 3个结局很不错~</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a data-action="wish" data-id="26437663" class="collect-btn" rel="nofollow" href="https://www.douban.com/game/26437663/?interest=wish">
+                        <span>想玩</span>
+                    </a>
+                </span>
+                <span class='gact'>
+                    <a data-action="collect" data-id="26437663" class="collect-btn" rel="nofollow" href="https://www.douban.com/game/26437663/?interest=collect">
+                        <span>玩过</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="common-item">
+        <div class="pic">
+            <a href="https://www.douban.com/game/10758368/"><img src="https://img2.doubanio.com/lpic/s9129421.jpg" alt="" /></a>
+        </div>
+        <div class="content">
+            <div class="title">
+                <a href="https://www.douban.com/game/10758368/">交错†频道 CROSS†CHANNEL</a>
+            </div>
+            <div class="desc">
+                PC / PS3 / X360 / PS2 / VITA / PSP / 冒险 / 文字冒险 / 2003-09-26
+                <div class="rating-info">
+                    <span class="rating-star allstar50"></span>
+                    <span class="date">2015-06-14</span>
+                        <span class="tags">标签: 日本 GAL</span>
+                </div>
+            </div>
+        <div>www.crosschannel.cn 汉化组项目主页</div>
+            <div class="user-operation">
+                <span class='gact'>
+                    <a data-action="wish" data-id="10758368" class="collect-btn" rel="nofollow" href="https://www.douban.com/game/10758368/?interest=wish">
+                        <span>想玩</span>
+                    </a>
+                </span>
+                <span class='gact'>
+                    <a data-action="collect" data-id="10758368" class="collect-btn" rel="nofollow" href="https://www.douban.com/game/10758368/?interest=collect">
+                        <span>玩过</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="template-collect-popup">
+    <form action="/j/ilmen/thing/{id}/interest">
+                {interestTmpl}
+                {ratingTmpl}
+                {platformTmpl}
+        <div class="item item-tags">
+            <label for="tags">标签(多个标签用空格分隔): </label>
+            <input name="tags" type="text" class="inp-tags" value="{selected_tags}" />
+            <div id="mytags"></div>
+            <div id="populartags"></div>
+        </div>
+        <div class="item">
+            <label class="reason">简短评论</label>
+            <textarea name="comment">{comment}</textarea>
+            <span class="count">350</span>
+        </div>
+        <div class="submit-item">
+            <div class="item-share">
+                        分享到:
+                <label for="dlg-opt-share">
+                    <input type="checkbox" id="dlg-opt-share" name="share-shuo" value="1" {isShuoChecked} />我的广播
+                </label>
+            </div>
+            <span class="bn-flat">
+                <input type="submit" value="保存" />
+            </span>
+        </div>
+    </form>
+</script>
+
+
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            <link rel="prev" href="?action=collect&amp;start=255"/>
+            <a href="?action=collect&amp;start=255" >&lt;前页</a>
+        </span>
+        
+        
+            
+            <a href="?action=collect&amp;start=0" >1</a>
+        
+            <a href="?action=collect&amp;start=15" >2</a>
+        <span class="break">...</span>
+
+                
+            <a href="?action=collect&amp;start=150" >11</a>
+        
+                
+            <a href="?action=collect&amp;start=165" >12</a>
+        
+                
+            <a href="?action=collect&amp;start=180" >13</a>
+        
+                
+            <a href="?action=collect&amp;start=195" >14</a>
+        
+                
+            <a href="?action=collect&amp;start=210" >15</a>
+        
+                
+            <a href="?action=collect&amp;start=225" >16</a>
+        
+                
+            <a href="?action=collect&amp;start=240" >17</a>
+        
+                
+            <a href="?action=collect&amp;start=255" >18</a>
+        
+                <span class="thispage" data-total-page="19">19</span>
+        <span class="next">
+            后页&gt;
+        </span>
+
+            <span class="count">(共273个)</span>
+        </div>
+
+
+
+        </div>
+        <div class="aside">
+                
+<div class="mod side-nav">
+    &gt; <a href="/game/explore">发现更多游戏</a>
+</div>
+
+        </div>
+        <div class="extra">
+            
+        </div>
+    </div>
+</div>
+
+        
+<div id="footer">
+    
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2023 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=main" target="_blank">帮助中心</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="https://img1.doubanio.com/f/shire/df6a1d712d36db03e9bddb32cbd5fa080bfcddfc/js/core/do/_init_.js"></script>
+
+<script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/7c348a77fe02a2ef.js"></script>
+
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5WP579" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5WP579');</script>
+<!-- End Google Tag Manager -->
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7019765-1']);
+_gaq.push(['_setCampNameKey', 'dcn']);
+_gaq.push(['_setCampSourceKey', 'dcs']);
+_gaq.push(['_setCampMediumKey', 'dcm']);
+_gaq.push(['_setCampTermKey', 'dct']);
+_gaq.push(['_setCampContentKey', 'dcc']);
+_gaq.push(['_addOrganic', 'baidu', 'word']);
+_gaq.push(['_addOrganic', 'soso', 'w']);
+_gaq.push(['_addOrganic', '3721', 'name']);
+_gaq.push(['_addOrganic', 'youdao', 'q']);
+_gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+_gaq.push(['_addOrganic', 'vnet', 'kw']);
+_gaq.push(['_addOrganic', 'sogou', 'query']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣']);
+_gaq.push(['_addIgnoredOrganic', 'douban']);
+_gaq.push(['_addIgnoredOrganic', '豆瓣网']);
+_gaq.push(['_addIgnoredOrganic', 'www.douban.com']);
+_gaq.push(['_setDomainName', '.douban.com']);
+
+
+    _gaq.push(['_setCustomVar', 1, 'responsive_view_mode', 'desktop', 3]);
+
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+
+window._ga_init = function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+};
+if (window.addEventListener) {
+    window.addEventListener('load', _ga_init, false);
+} else {
+    window.attachEvent('onload', _ga_init);
+}
+</script>
+
+
+
+
+
+
+
+<!-- dae-web-ilmen--default-5d55fd8759-qsw67-->
+
+  <script>_SPLITTEST=''</script>
+</body>
+
+</html>
+
+
