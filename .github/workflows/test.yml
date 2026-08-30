@@ -1,0 +1,31 @@
+name: test
+on:
+  push: { branches: [main] }
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { path: doubak-import-adapters }
+
+      # vendor 的新鲜度检查要有上游在场才算数。**缺仓库在 CI 里是失败而不是跳过**
+      # ——跳过在 CI 里等于没测，而这个检查的全部价值就在于它真的跑过。
+      - uses: actions/checkout@v4
+        with: { repository: Doubak/doubak-extension, path: doubak-extension }
+
+      # 规范仓库带的参考校验器是**外部裁判**：本仓库的写入器和本仓库的测试出自
+      # 同一套理解，一个理解错了两边会一起错、一起绿。
+      - uses: actions/checkout@v4
+        with: { repository: Doubak/doubak-data-specs, path: doubak-data-specs }
+
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - run: node tools/sync-vendor.mjs --check
+        working-directory: doubak-import-adapters
+        env: { CI: 'true' }
+
+      - run: npm test
+        working-directory: doubak-import-adapters

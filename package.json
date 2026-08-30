@@ -1,0 +1,17 @@
+{
+  "name": "doubak-import-adapters",
+  "version": "0.1.0",
+  "description": "把第三方抓取工具存下来的页面，转成 doubak 的 bundle 档案格式",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "doubak-import": "bin/import.js"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "sync-vendor": "node tools/sync-vendor.mjs"
+  }
+}

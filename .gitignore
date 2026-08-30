@@ -141,3 +141,7 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# 导入产出的档案目录（很大，而且随时可以从源目录重新生成）
+/out/
+doubak-bundle-*/
