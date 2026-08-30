@@ -100,5 +100,8 @@ for (const b of bundles) {
 }
 console.log(`  合计 ${total} 次捕获`);
 console.log('\n下一步：');
-console.log(`  python3 <doubak-data-specs>/bundle/v1/validate.py ${outDir}/doubak-bundle-*   # 校验`);
+// **重新组装出来的档案尤其该核一遍。** 偏移量、记录 id、content_sha256 全是这边
+// 算出来再写进索引的，算错了写出来的档案照样打得开、照样能解析。
+console.log(`  node <doubak-data-parser>/bin/verify.js ${outDir}                            # 核字节`);
+console.log(`  python3 <doubak-data-specs>/bundle/v1/validate.py ${outDir}/doubak-bundle-*   # 校验规范`);
 console.log(`  node <doubak-data-parser>/bin/parse.js ${outDir} <canonical 输出目录>          # 解析`);

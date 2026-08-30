@@ -154,11 +154,20 @@ movie/26869078   （identity_layer: degraded_key，upstream_id 3199573829）
 
 ```sh
 # 规范仓库自带的参考校验器（外部裁判，npm test 里也会跑）
+#   退出码 0 干净 / 1 只有合规性错误（字节没问题）/ 2 有完整性错误
 python3 ../doubak-data-specs/bundle/v1/validate.py <输出目录>/doubak-bundle-*
 
-# 解析成 canonical
+# 只核字节（零依赖，不用 Python）
+node ../doubak-data-parser/bin/verify.js <输出目录>
+
+# 解析成 canonical —— 字节校验默认就跑
 node ../doubak-data-parser/bin/parse.js <输出目录> <canonical 输出目录>
 ```
+
+**导入产出的档案尤其该核一遍。** 抓取产出的 bundle 是浏览器一条条写下来的，
+而导入产出的是这个工具**重新组装**的：偏移量、记录 id、`content_sha256` 全是这边
+算出来再写进索引的，算错了写出来的档案照样打得开、照样能解析。核一遍是
+「组装对不对」唯一的外部证据。
 
 ## 许可
 
