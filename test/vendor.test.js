@@ -62,7 +62,7 @@ describe('vendor 与上游的一致性', () => {
 });
 
 describe('搬过来的东西真的跑得动', () => {
-  test('规范的投影：本仓库按 bundle/1.3 写，而且新那个成色取值在', () => {
+  test('规范的投影：本仓库按 bundle/1.x 写，而且新那个成色取值在', () => {
     // 这个取值是这个仓库存在的前提：正文是真的、头部是编的，规范里必须有话说。
     // 少了它，`assertValidEntry` 会把每一行都拒掉。
     assert.match(SPEC_VERSION, /^bundle\/1\.\d+$/);
