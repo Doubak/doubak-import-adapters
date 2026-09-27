@@ -43,7 +43,7 @@ describe('文件名', () => {
     });
   });
 
-  test('认不出来就是 null，不猜', () => {
+  test('无法识别时返回 null，不进行推测', () => {
     // 猜的代价是把一个不知道是什么的页面安进某条路线，而那会污染 coverage。
     for (const n of ['notes.html', 'README.md', '20240811_movie_watched_l0-15.html',
       '20240811.1246_podcast_watched_l0-15.html', '20240811.1246_movie_seen_l0-15.html']) {
@@ -116,7 +116,7 @@ describe('对着真实页面量出来的东西', () => {
     assert.ok(checked >= 2, `只比了 ${checked} 页，fixture 或正则大概坏了`);
   });
 
-  test('账号：个人页域名取自个人页头，数字 ID 不许把 0 当成 ID', () => {
+  test('账号：个人页域名取自个人页头，数字 ID 禁止将 0 误判为有效 ID', () => {
     const names = new Set(pages.map((p) => usernameFrom(p.html)).filter(Boolean));
     assert.deepEqual([...names], ['mewcatcher'], '个人页头里的域名应当只有一个，且是页面主人');
 
