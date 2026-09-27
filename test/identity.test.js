@@ -23,7 +23,7 @@ describe('账号', () => {
     assert.equal(a.userId, '82160871');
   });
 
-  test('两个来源对不上就**停下来**，不挑一个', () => {
+  test('两个来源冲突时终止处理，禁止随意推断选取', () => {
     // 安错账号的后果不是「这份档案不好看」，是它会跟别人的档案在同一个目录里被
     // 合并，而合并过的 canonical 拆不开。
     const fake = [
@@ -47,7 +47,7 @@ describe('账号', () => {
     assert.ok(a.notes.some((n) => n.includes('未能交叉印证')), '这件事必须说出来');
   });
 
-  test('一个数字 ID 都找不到时，说清为什么，并给出下一步', () => {
+  test('未能获取有效数字 ID 时说明具体原因，并提供后续操作指引', () => {
     // 整场抓取都没登录的档案就是这样：未登录页上 USER_ID 是 0。
     const anon = [{ kind: 'interest_list', path: 'b' }];
     assert.throws(
@@ -58,7 +58,7 @@ describe('账号', () => {
 });
 
 describe('目录扫描', () => {
-  test('认不出来的文件要数出来，不能静静跳过', () => {
+  test('无法识别的文件明确统计计数，禁止静默忽略', () => {
     // 静静跳过等于宣布「这个目录里就这么多」，而少读一个文件在产出里没有任何声响。
     const { entries, unrecognized } = scan(FIX);
     assert.ok(unrecognized.includes('notes.html'));

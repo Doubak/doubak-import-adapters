@@ -73,8 +73,8 @@ describe('产出的形状', () => {
   });
 });
 
-describe('诚实：补出来的东西必须标明是补的', () => {
-  test('**每一行都写着「正文是真的，头部是编的」**', () => {
+describe('真实性要求：补充构造的内容必须明确标明', () => {
+  test('**每行均明确标注「正文为真实内容，头部为构造数据」**', () => {
     // 规范 §6.4.1：不许降级成 filtered_headers——那个取值宣称头部来自服务器。
     // 「被过滤的真头部」与「凭空造的假头部」的区别，恰恰是取证时唯一要问的问题。
     for (const r of rows) {
@@ -82,7 +82,7 @@ describe('诚实：补出来的东西必须标明是补的', () => {
     }
   });
 
-  test('**不写 http_status**：能不编就不编', () => {
+  test('**不写入 http_status**：无依据时不推测构造', () => {
     // WARC 的 response 记录结构上必须有个状态行，那没办法；但 index 里这个字段
     // 是可选的，编一个 200 进去毫无必要，而且读者会拿它当真。
     for (const r of rows) assert.ok(!('http_status' in r), `${r.capture_id} 写了 http_status`);
@@ -119,7 +119,7 @@ describe('诚实：补出来的东西必须标明是补的', () => {
   });
 });
 
-describe('verdict 照判不误 —— 头部可以编，判定不可以', () => {
+describe('verdict 判定要求严格 —— 允许构造头部，但判定结论必须真实', () => {
   const of = (name) => rows.find((r) => r.capture_id && r.url && matchName(r, name));
   const matchName = (r, name) => {
     if (name === 'anon-list') return r.route_key === 'interest.game.collect' && r.observed_at.startsWith('2023-01');
@@ -140,7 +140,7 @@ describe('verdict 照判不误 —— 头部可以编，判定不可以', () => 
     assert.equal(of('login-page').verdict, 'login');
   });
 
-  test('0 字节的文件 → 不许是 ok，而且要说清是哪一种判不出来', () => {
+  test('0 字节文件禁止判定为 ok，且须说明无法判定的具体原因', () => {
     // 规范 §6.5.2。真实档案里有 7 个这样的文件，与一次会话失效同批产生，
     // 磁盘上没有任何失败痕迹——下游只会看到「文件在」。
     const r = of('empty');
