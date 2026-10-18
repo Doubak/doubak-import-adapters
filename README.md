@@ -135,7 +135,7 @@ game/27054820    瘟疫公司：物竞天择 Plague Inc: Evolved
 
 ## 为何直接复用扩展代码，而非独立实现
 
-`src/vendor/` 为 `doubak-extension` 中对应 9 个核心模块的源码复用副本，由 `node tools/sync-vendor.mjs --check` 严格保障代码同步状态（在本地测试与 CI 中均会校验）。
+`src/vendor/` 为 `doubak-extension` 中对应 10 个核心模块的源码复用副本，由 `node tools/sync-vendor.mjs --check` 严格保障代码同步状态（在本地测试与 CI 中均会校验）。
 
 如需修改，统一在 extension 仓库调整后重新同步。这是为了确保本工具输出的 bundle 归档与浏览器扩展在底层实现与行为逻辑上完全保持一致。许多工程约束（如段轮转边界保护、文件偏移量计算基准、`advanced=true` 的连续性保障、`floor_time` 与 `enumeration` 的互斥约束等）直接由写入器核心代码约束，而不仅停留在 JSON Schema 层面。
 

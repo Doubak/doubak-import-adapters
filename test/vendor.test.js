@@ -22,7 +22,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, posix } from 'node:path';
 
 import { SOURCES, findDir, renderOne, listJs } from '../tools/sync-vendor.mjs';
 import { SPEC_VERSION, CAPTURE_FIDELITIES, VERDICTS } from '../src/vendor/core/spec-constants.js';
@@ -52,6 +52,22 @@ describe('vendor 与上游的一致性', () => {
     test(`${source.repo}：名单与目录两头对齐`, () => {
       // 两个方向都要查：上游删了文件这边还留着（多），名单里加了一项忘了同步（少）。
       assert.deepEqual(listJs(VENDOR).sort(), [...source.files].sort());
+    });
+
+    test(`${source.repo}：待同步源码的相对依赖都在名单中`, { skip }, () => {
+      // Inspect the next sync, not just the old vendor which may still import fine.
+      const rendered = renderOne(source, dir);
+      let imports = 0;
+      for (const [name, text] of rendered) {
+        for (const match of text.matchAll(/^[ \t]*(?:import|export)\s+(?:[^'";]*?\s+from\s*)?['"]([^'"]+)['"]/gm)) {
+          const specifier = match[1];
+          if (!specifier.startsWith('.')) continue;
+          imports++;
+          const dependency = posix.normalize(posix.join(posix.dirname(name), specifier));
+          assert.ok(rendered.has(dependency), `${name} 引用了未同步的 ${dependency}`);
+        }
+      }
+      assert.ok(imports > 0, '必须实际检查到依赖，不能空跑');
     });
   }
 

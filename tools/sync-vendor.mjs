@@ -66,6 +66,8 @@ export const SOURCES = [
       'bundle/manifest-builder.js',
       // 判定与页面抽取。**这个仓库存在的理由有一半在这个文件里。**
       'crawl/classifier.js',
+      // 分类器识别 PoW 表单的依赖；同步名单必须包含整个静态依赖闭包。
+      'crawl/pow.js',
     ],
   },
 ];
